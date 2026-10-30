@@ -1,0 +1,39 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+
+# Training data and generated artifacts
+Dataset/
+dataset/
+data/raw/
+log/
+logs/
+result/
+results/
+output_dir/
+checkpoints/
+"best weight"/
+best_weight/
+
+# Model weights and large archives
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Experiment trackers
+wandb/
+runs/
+tf-logs/

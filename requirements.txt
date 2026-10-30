@@ -1,0 +1,16 @@
+torch
+torchvision
+accelerate
+torchmetrics
+tqdm
+lpips
+mmcv
+timm
+einops
+opencv-python
+numpy
+kornia
+Pillow
+albumentations
+yacs
+wandb

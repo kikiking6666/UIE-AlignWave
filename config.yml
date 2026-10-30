@@ -1,0 +1,40 @@
+VERBOSE: False
+
+MODEL:
+  SESSION: 'UIR_PolyKernel_Wavelet'
+  INPUT: 'input'
+  TARGET: 'target'
+
+# Optimization arguments.
+OPTIM:
+  BATCH_SIZE: 8
+  NUM_EPOCHS: 350
+  LR_INITIAL: 1e-4
+  LR_MIN: 1e-6
+  SEED: 3407
+  WANDB: False
+
+TRAINING:
+  VAL_AFTER_EVERY: 1
+  RESUME: False
+  WEIGHT:
+  PS_W: 256
+  PS_H: 256
+  TRAIN_DIR: '/root/autodl-tmp/Dataset/train' # path to training data
+  VAL_DIR: '/root/autodl-tmp/Dataset/testset(ref)/test-UIEB'     # path to validation data
+  SAVE_DIR: '/root/autodl-tmp/result/save_k=5'          # path to save models and images
+  ORI: False
+  LOG_FILE: 'train_log_data.txt'
+
+TESTING:
+  MODE: 'ref' # noref or ref
+  INPUT: 'input'
+  TARGET: 'target'
+  VAL_DIR: '/root/autodl-tmp/Dataset/testset(ref)/test-EUVP'     # path to testing data
+  WEIGHT: '/root/autodl-tmp/result/save_data_quary/UIR_PolyKernel_Wavelet_epoch99_epoch_99.pth'
+  SAVE_IMAGES: True
+  RESULT_DIR: '/root/autodl-tmp/result/test_result_5*5'
+  LOG_FILE: "test_log_data.txt"
+
+LOG:
+  LOG_DIR: '/root/autodl-tmp/log'
